@@ -1,0 +1,298 @@
+/* Importando fontes modernas e altamente legíveis do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap');
+
+/* Reset de estilos e definição de variáveis de cor (Paleta Harmônica) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Fonte principal para textos */
+}
+
+:root {
+    --bg-principal: #f4f6f4;      /* Cinza esverdeado bem claro e confortável */
+    --verde-escuro: #1b4332;      /* Verde floresta para títulos e destaques */
+    --verde-medio: #40916c;       /* Verde sálvia para botões ativos e bordas */
+    --verde-claro: #d8f3dc;       /* Fundo de seções/alertas */
+    --texto-escuro: #2d3748;      /* Cinza escuro (melhor que preto puro para leitura) */
+    --texto-claro: #ffffff;
+    --card-bg: #ffffff;           /* Fundo branco puro para os cards se destacarem */
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-escuro);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o projeto em telas grandes */
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 50px 20px;
+    min-height: 180px;
+    color: var(--texto-claro);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.5)
+    ), url("https://www.cma.com.br/wp-content/uploads/2019/09/banner-agro-informacoes-analises-1-min.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+header h1 { 
+    font-family: 'Sora', sans-serif;
+    font-size: 3.5rem;        
+    font-weight: 700;           
+    letter-spacing: -1px;       
+    text-transform: uppercase;  
+    color: var(--texto-claro);
+    
+    /* Cria uma sombra suave e borrada para desgrudar o texto do fundo */
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35); 
+    
+    /* Dá uma leve animada suave ao carregar a página */
+    animation: surgirTitulo 0.8s ease-out;
+}
+
+/* Barra de Navegação */
+nav {
+    background-color: var(--verde-escuro);
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-links { 
+    display: flex; 
+    gap: 12px; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Botões do Menu */
+.btn-menu {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-menu:hover { 
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: var(--texto-claro);
+}
+
+.btn-menu.ativo {
+    background-color: var(--texto-claro);
+    color: var(--verde-escuro);
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Layout Containers */
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Conteúdo Principal (Esquerda) */
+article {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Seções / Cards de Conteúdo */
+section {
+    background-color: var(--card-bg);
+    color: var(--texto-escuro);
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--verde-medio);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+section h2 { 
+    font-family: 'Sora', sans-serif;
+    color: var(--verde-escuro);
+    font-size: 1.4rem;
+    margin-bottom: 12px; 
+    padding-bottom: 8px; 
+}
+
+section p { 
+    font-weight: 400; 
+    line-height: 1.6; 
+    text-align: justify;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+section p strong {
+    color: var(--verde-escuro);
+}
+
+/* Barra Lateral (Aside) */
+aside {
+    background-color: var(--verde-claro);
+    flex: 1;
+    min-height: 250px;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--verde-escuro);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+aside h3 { 
+    font-family: 'Sora', sans-serif;
+    font-size: 1.15rem;
+    border-bottom: 2px solid rgba(64, 145, 108, 0.3); 
+    width: 100%; 
+    padding-bottom: 8px; 
+}
+
+aside ul { 
+    list-style-position: inside; 
+    font-weight: 400; 
+    line-height: 1.5;
+}
+
+aside li { 
+    margin-bottom: 12px; 
+    font-size: 0.95rem;
+}
+
+.aside-text {
+    font-size: 0.9rem;
+    color: #2d3748;
+    line-height: 1.4;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--verde-escuro);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* SPA: Troca de telas */
+.pagina-tela {
+    display: none !important;
+}
+.pagina-tela.ativa {
+    display: flex !important;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos do Simulador e Formulários */
+.form-simulador {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.form-simulador input {
+    padding: 12px 14px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--texto-escuro);
+    background-color: #f8fafc;
+    transition: border-color 0.2s;
+}
+
+.form-simulador input:focus, .form-simulador textarea:focus {
+    outline: none;
+    border-color: var(--verde-medio);
+    background-color: #fff;
+}
+
+.form-simulador button {
+    padding: 14px;
+    background-color: var(--verde-medio);
+    color: var(--texto-claro);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-simulador button:hover { 
+    background-color: var(--verde-escuro); 
+}
+
+.vitrine-cards { 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.card-item {
+    background: var(--card-bg);
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 4px solid var(--verde-medio);
+    font-size: 0.9rem;
+    color: var(--texto-escuro);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    line-height: 1.4;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    .container { flex-direction: column; gap: 15px; }
+    nav { padding: 10px; }
+    .nav-links { flex-direction: column; width: 100%; gap: 8px; }
+    .btn-menu { width: 100%; }
+    header h1 { font-size: 2.2rem; }
+}
