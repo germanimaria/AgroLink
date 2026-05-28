@@ -1,22 +1,21 @@
-/* Importando fontes modernas e altamente legíveis do Google Fonts */
+/* Importando fontes modernas do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap');
 
-/* Reset de estilos e definição de variáveis de cor (Paleta Harmônica) */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Fonte principal para textos */
+    font-family: 'Inter', sans-serif;
 }
 
 :root {
-    --bg-principal: #f4f6f4;      /* Cinza esverdeado bem claro e confortável */
-    --verde-escuro: #1b4332;      /* Verde floresta para títulos e destaques */
-    --verde-medio: #40916c;       /* Verde sálvia para botões ativos e bordas */
-    --verde-claro: #d8f3dc;       /* Fundo de seções/alertas */
-    --texto-escuro: #2d3748;      /* Cinza escuro (melhor que preto puro para leitura) */
+    --bg-principal: #f4f6f4;      
+    --verde-escuro: #1b4332;      
+    --verde-medio: #40916c;       
+    --verde-claro: #d8f3dc;       
+    --texto-escuro: #2d3748;      
     --texto-claro: #ffffff;
-    --card-bg: #ffffff;           /* Fundo branco puro para os cards se destacarem */
+    --card-bg: #ffffff;           
 }
 
 body {
@@ -27,7 +26,7 @@ body {
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto; /* Centraliza o projeto em telas grandes */
+    margin: 0 auto;
 }
 
 /* Header */
@@ -58,12 +57,7 @@ header h1 {
     letter-spacing: -1px;       
     text-transform: uppercase;  
     color: var(--texto-claro);
-    
-    /* Cria uma sombra suave e borrada para desgrudar o texto do fundo */
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35); 
-    
-    /* Dá uma leve animada suave ao carregar a página */
-    animation: surgirTitulo 0.8s ease-out;
 }
 
 /* Barra de Navegação */
@@ -72,7 +66,6 @@ nav {
     padding: 12px 20px;
     border-radius: 8px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -85,7 +78,6 @@ nav {
     justify-content: center;
 }
 
-/* Botões do Menu */
 .btn-menu {
     padding: 10px 20px;
     border: none;
@@ -117,7 +109,6 @@ nav {
     align-items: flex-start;
 }
 
-/* Conteúdo Principal (Esquerda) */
 article {
     flex: 3;
     display: flex;
@@ -125,7 +116,6 @@ article {
     gap: 20px;
 }
 
-/* Seções / Cards de Conteúdo */
 section {
     background-color: var(--card-bg);
     color: var(--texto-escuro);
@@ -212,9 +202,7 @@ footer {
 }
 
 /* SPA: Troca de telas */
-.pagina-tela {
-    display: none !important;
-}
+.pagina-tela { display: none !important; }
 .pagina-tela.ativa {
     display: flex !important;
     animation: fadeIn 0.4s ease-out;
@@ -225,7 +213,7 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Estilos do Simulador e Formulários */
+/* Formulários e Simulador */
 .form-simulador {
     width: 100%;
     display: flex;
@@ -234,7 +222,7 @@ footer {
     margin-top: 15px;
 }
 
-.form-simulador input {
+.form-simulador input, .form-simulador textarea {
     padding: 12px 14px;
     border: 1.5px solid #e2e8f0;
     border-radius: 6px;
@@ -243,6 +231,12 @@ footer {
     color: var(--texto-escuro);
     background-color: #f8fafc;
     transition: border-color 0.2s;
+}
+
+.form-simulador textarea {
+    min-height: 120px;
+    resize: vertical;
+    outline: none;
 }
 
 .form-simulador input:focus, .form-simulador textarea:focus {
@@ -265,9 +259,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.form-simulador button:hover { 
-    background-color: var(--verde-escuro); 
-}
+.form-simulador button:hover { background-color: var(--verde-escuro); }
 
 .vitrine-cards { 
     width: 100%; 
@@ -287,12 +279,26 @@ footer {
     line-height: 1.4;
 }
 
-/* Responsividade para Celulares */
+.legenda-vitrine {
+    font-size: 11px; 
+    margin-bottom: 10px; 
+    color: var(--verde-escuro); 
+    opacity: 0.8;
+}
+
+.tela-inteira { width: 100%; flex: none; }
+
+/* Responsividade */
 @media (max-width: 768px) {
     body { padding: 10px; }
     .container { flex-direction: column; gap: 15px; }
-    nav { padding: 10px; }
     .nav-links { flex-direction: column; width: 100%; gap: 8px; }
     .btn-menu { width: 100%; }
     header h1 { font-size: 2.2rem; }
 }
+
+/* Classes Utilitárias Globais de Margem (Substituem dezenas de classes repetidas) */
+.mt-10 { margin-top: 10px; }
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mb-15 { margin-bottom: 15px; }
