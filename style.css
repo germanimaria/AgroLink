@@ -1,4 +1,4 @@
-/* Importando fontes modernas do Google Fonts */
+/* Estilos Gerais do Site */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap');
 
 * {
@@ -29,7 +29,7 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
+/* Banner superior */
 header {
     display: flex;
     flex-direction: column;
@@ -40,10 +40,7 @@ header {
     min-height: 180px;
     color: var(--texto-claro);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(
-        to bottom,
-        rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.5)
-    ), url("https://www.cma.com.br/wp-content/uploads/2019/09/banner-agro-informacoes-analises-1-min.jpg");
+    background-image: linear-gradient(to bottom, rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.5)), url("https://www.cma.com.br/wp-content/uploads/2019/09/banner-agro-informacoes-analises-1-min.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -54,29 +51,19 @@ header h1 {
     font-family: 'Sora', sans-serif;
     font-size: 3.5rem;        
     font-weight: 700;           
-    letter-spacing: -1px;       
     text-transform: uppercase;  
-    color: var(--texto-claro);
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35); 
 }
 
-/* Barra de Navegação */
+/* Barra de menu */
 nav {
     background-color: var(--verde-escuro);
     padding: 12px 20px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.nav-links { 
-    display: flex; 
-    gap: 12px; 
-    flex-wrap: wrap;
-    justify-content: center;
-}
+.nav-links { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .btn-menu {
     padding: 10px 20px;
@@ -85,68 +72,29 @@ nav {
     color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
     font-weight: 500;
-    font-size: 0.95rem;
     border-radius: 6px;
     transition: all 0.3s ease;
 }
 
-.btn-menu:hover { 
-    background-color: rgba(255, 255, 255, 0.2); 
-    color: var(--texto-claro);
-}
+.btn-menu:hover { background-color: rgba(255, 255, 255, 0.2); }
+.btn-menu.ativo { background-color: var(--texto-claro); color: var(--verde-escuro); font-weight: 600; }
 
-.btn-menu.ativo {
-    background-color: var(--texto-claro);
-    color: var(--verde-escuro);
-    font-weight: 600;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* Layout Containers */
-.container {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-article {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+/* Estrutura das duas colunas */
+.container { display: flex; gap: 20px; align-items: flex-start; }
+article { flex: 3; display: flex; flex-direction: column; gap: 20px; }
 
 section {
     background-color: var(--card-bg);
-    color: var(--texto-escuro);
-    width: 100%;
     padding: 25px;
     border-radius: 10px;
     border-left: 5px solid var(--verde-medio);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 }
 
-section h2 { 
-    font-family: 'Sora', sans-serif;
-    color: var(--verde-escuro);
-    font-size: 1.4rem;
-    margin-bottom: 12px; 
-    padding-bottom: 8px; 
-}
+section h2 { font-family: 'Sora', sans-serif; color: var(--verde-escuro); font-size: 1.4rem; margin-bottom: 12px; }
+section p { line-height: 1.6; text-align: justify; color: #4a5568; }
 
-section p { 
-    font-weight: 400; 
-    line-height: 1.6; 
-    text-align: justify;
-    font-size: 1rem;
-    color: #4a5568;
-}
-
-section p strong {
-    color: var(--verde-escuro);
-}
-
-/* Barra Lateral (Aside) */
+/* Coluna Lateral */
 aside {
     background-color: var(--verde-claro);
     flex: 1;
@@ -157,35 +105,12 @@ aside {
     flex-direction: column;
     gap: 15px;
     color: var(--verde-escuro);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 }
 
-aside h3 { 
-    font-family: 'Sora', sans-serif;
-    font-size: 1.15rem;
-    border-bottom: 2px solid rgba(64, 145, 108, 0.3); 
-    width: 100%; 
-    padding-bottom: 8px; 
-}
+aside h3 { font-family: 'Sora', sans-serif; border-bottom: 2px solid rgba(64, 145, 108, 0.3); padding-bottom: 8px; }
+aside ul { list-style-position: inside; }
+aside li { margin-bottom: 12px; }
 
-aside ul { 
-    list-style-position: inside; 
-    font-weight: 400; 
-    line-height: 1.5;
-}
-
-aside li { 
-    margin-bottom: 12px; 
-    font-size: 0.95rem;
-}
-
-.aside-text {
-    font-size: 0.9rem;
-    color: #2d3748;
-    line-height: 1.4;
-}
-
-/* Rodapé */
 footer {
     background-color: var(--verde-escuro);
     height: 70px;
@@ -193,112 +118,55 @@ footer {
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-align: center;
     border-radius: 8px;
-    margin-top: 10px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.02);
 }
 
-/* SPA: Troca de telas */
+/* Transição SPA */
 .pagina-tela { display: none !important; }
-.pagina-tela.ativa {
-    display: flex !important;
-    animation: fadeIn 0.4s ease-out;
-}
+.pagina-tela.ativa { display: flex !important; animation: fadeIn 0.4s ease-out; }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Formulários e Simulador */
-.form-simulador {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
-}
-
-.form-simulador input, .form-simulador textarea {
-    padding: 12px 14px;
-    border: 1.5px solid #e2e8f0;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 0.95rem;
-    color: var(--texto-escuro);
-    background-color: #f8fafc;
-    transition: border-color 0.2s;
-}
-
-.form-simulador textarea {
-    min-height: 120px;
-    resize: vertical;
-    outline: none;
-}
-
-.form-simulador input:focus, .form-simulador textarea:focus {
-    outline: none;
-    border-color: var(--verde-medio);
-    background-color: #fff;
-}
-
-.form-simulador button {
-    padding: 14px;
-    background-color: var(--verde-medio);
-    color: var(--texto-claro);
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 6px;
-    transition: background-color 0.2s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
+/* Formulários */
+.form-simulador { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
+.form-simulador input, .form-simulador textarea { padding: 12px; border: 1.5px solid #e2e8f0; border-radius: 6px; background-color: #f8fafc; }
+.form-simulador input:focus, .form-simulador textarea:focus { outline: none; border-color: var(--verde-medio); background-color: #fff; }
+.form-simulador button { padding: 14px; background-color: var(--verde-medio); color: var(--texto-claro); border: none; cursor: pointer; font-weight: 600; border-radius: 6px; }
 .form-simulador button:hover { background-color: var(--verde-escuro); }
 
-.vitrine-cards { 
-    width: 100%; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; 
-}
+/* Estilos da Calculadora de Carbono (Diferencial 1) */
+.resultado-calc.escondido { display: none !important; }
+.resultado-calc { display: block; background-color: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #b7e4c7; line-height: 1.5; }
+.sucesso-texto { color: #1b4332; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #b7e4c7; }
+.erro-texto { color: #b70000; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e2e8f0; }
 
-.card-item {
-    background: var(--card-bg);
-    padding: 12px;
-    border-radius: 6px;
-    border-left: 4px solid var(--verde-medio);
-    font-size: 0.9rem;
-    color: var(--texto-escuro);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-    line-height: 1.4;
-}
+/* Checkbox do cadastro */
+.checkbox-sustentavel { display: flex; align-items: center; gap: 10px; padding: 5px 0; }
+.checkbox-sustentavel label { font-size: 0.88rem; color: var(--verde-escuro); cursor: pointer; }
 
-.legenda-vitrine {
-    font-size: 11px; 
-    margin-bottom: 10px; 
-    color: var(--verde-escuro); 
-    opacity: 0.8;
-}
+/* Estilos dos Cards da Vitrine */
+.vitrine-cards { width: 100%; display: flex; flex-direction: column; gap: 12px; }
+.card-item { background: var(--card-bg); padding: 15px; border-radius: 6px; border-left: 4px solid #40916c; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); }
+.card-item.eco-destaque { border-left: 4px solid #40916c; background-color: #f7fee7; }
+.selo-eco { background-color: #d8f3dc; color: #1b4332; font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 20px; display: inline-block; margin-bottom: 5px; }
 
+/* Botão de Encomenda (Diferencial 3) */
+.btn-encomenda { width: 100%; margin-top: 10px; padding: 8px; background-color: var(--verde-escuro); color: white; border: none; border-radius: 4px; cursor: pointer; }
+.btn-encomenda:hover { background-color: var(--verde-medio); }
+
+.legenda-vitrine { font-size: 11px; color: var(--verde-escuro); opacity: 0.8; }
 .tela-inteira { width: 100%; flex: none; }
-
-/* Responsividade */
-@media (max-width: 768px) {
-    body { padding: 10px; }
-    .container { flex-direction: column; gap: 15px; }
-    .nav-links { flex-direction: column; width: 100%; gap: 8px; }
-    .btn-menu { width: 100%; }
-    header h1 { font-size: 2.2rem; }
-}
-
-/* Classes Utilitárias Globais de Margem (Substituem dezenas de classes repetidas) */
 .mt-10 { margin-top: 10px; }
 .mt-15 { margin-top: 15px; }
 .mt-20 { margin-top: 20px; }
 .mb-15 { margin-bottom: 15px; }
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .container { flex-direction: column; gap: 15px; }
+    .nav-links { flex-direction: column; width: 100%; }
+    header h1 { font-size: 2.2rem; }
+}

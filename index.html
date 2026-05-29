@@ -34,7 +34,7 @@
             <section>
                 <h2>Tecnologia no Campo</h2>
                 <p>O agronegócio é o principal motor da economia brasileira, mas a distribuição e a venda da produção ainda enfrentam grandes desafios. Todos os anos, toneladas de alimentos são desperdiçadas porque estragam no transporte ou porque o produtor não encontra compradores no tempo certo da colheita. A tecnologia surge como uma ferramenta essencial para resolver esse problema.</p>
-                <p class="mt-15">Ao digitalizar a oferta do campo, o AgroLink ajuda o produtor a planejar suas vendas. Ele pode anunciar sua produção ainda na lavoura, organizar a entrega rapidamente e evitar o desperdício, transformando o que seria perda em eficiência e faturamento.</p>
+                <p class="mt-15">Ao digitalizar a oferta do campo, o AgroLink ajuda o produtor a planejar suas vendas. Ele pode anunciar sua produção ainda na lavoura, organize a entrega rapidamente e evitar o desperdício, transformando o que seria perda em eficiência e faturamento.</p>
             </section>
         </article>
 
@@ -65,6 +65,18 @@
                 <p class="mt-10"><strong>Bioinsumos:</strong> Uso de recursos naturais, como microrganismos ou insetos benéficos, para combater pragas e fertilizar a plantação. Reduz a necessidade de agrotóxicos, protegendo a água e a saúde do consumidor.</p>
                 <p class="mt-10"><strong>Rotação de Culturas:</strong> Alternância de diferentes espécies de plantas (como soja, milho e feijão) na mesma área a cada safra. Isso quebra o ciclo de pragas e melhora a qualidade natural da terra.</p>
             </section>
+
+            <section class="calculadora-box">
+                <h2>Calculadora de Carbono</h2>
+                <p class="mb-15">Descubra o impacto ecológico de comprar do produtor local! </p>
+                <p class="mb-15">Alimentos importados de outras regiões viajam longas distâncias, emitindo muito mais gases poluentes do que os produtos locais, então escolha sempre o mais próximo se possivel.</p>
+
+                <div class="form-simulador">
+                    <input type="number" id="distanciaKm" placeholder="Distância estimada até o produtor em Km (Ex: 15)" aria-label="Distância em quilômetros">
+                    <button onclick="calcularPegadaCarbono()">Calcular Impacto Ambiental</button>
+                </div>
+                <div id="resultadoCarbono" class="resultado-calc escondido mt-15"></div>
+            </section>
         </article>
 
         <aside>
@@ -88,10 +100,16 @@
                 <p class="mt-20"><strong>Insira os dados do alimento colhido abaixo para simular a publicação imediata na plataforma:</strong></p>
                 
                 <div class="form-simulador">
-                    <input type="text" id="nomeAlimento" placeholder="Nome do Alimento (Ex: Cenoura Hidropônica)">
-                    <input type="number" id="precoAlimento" step="0.01" min="0" placeholder="Preço Sugerido (Ex: 4.50)">
-                    <input type="text" id="cidadeProdutor" placeholder="Localização (Ex: Londrina)">
-                    <input type="text" id="numeroProdutor" placeholder="Número de Contato (Ex: (43) 12345-6789)">
+                    <input type="text" id="nomeAlimento" placeholder="Nome do Alimento (Ex: Cenoura Hidropônica)" aria-label="Nome do Alimento">
+                    <input type="number" id="precoAlimento" step="0.01" min="0" placeholder="Preço Sugerido (Ex: 4.50)" aria-label="Preço">
+                    <input type="text" id="cidadeProdutor" placeholder="Localização (Ex: Londrina)" aria-label="Cidade">
+                    <input type="text" id="numeroProdutor" placeholder="Número de Contato (Ex: (43) 12345-6789)" aria-label="Telefone de contato">
+                    
+                    <div class="checkbox-sustentavel">
+                        <input type="checkbox" id="cultivoSustentavel">
+                        <label for="cultivoSustentavel">🌱 Este alimento foi produzido utilizando técnicas sustentáveis (Orgânico, Plantio Direto ou Bioinsumos)</label>
+                    </div>
+
                     <button onclick="cadastrarProdutoSimulado()">Publicar Oferta</button>
                 </div>
             </section>
@@ -109,14 +127,14 @@
             <section>
                 <h2>Equipe de Desenvolvimento</h2>
                 <p>Este projeto foi idealizado e planejado pelos estudantes:</p>
-                <p class="mt-10"><strong>Maria Julia, Manuela, Franchesca e Maria Izabel. </strong></p>
+                <p class="mt-10"><strong>Maria Julia, Manuela, Franchesca e Maria Izabel.</strong></p>
             </section>
             <section>
                 <h2>Recursos e Tecnologias</h2>
-                <p class="mb-15">Para trazer nossa ideia à vida e criar este protótipo funcional, utilizamos as principais tecnologias da programação web:</p>
+                <p class="mb-15">Para trazer nossa idea à vida e criar este protótipo funcional, utilizamos as principais tecnologias da programação web:</p>
                 <p><strong>HTML5:</strong> Utilizado para construir a arquitetura semântica e organizada do site.</p>
                 <p class="mt-10"><strong>CSS3:</strong> Responsável pelo design visual, paleta de cores inspirada na natureza e layout adaptável para celulares.</p>
-                <p class="mt-10"><strong>JavaScript (ES6):</strong> Camada de inteligência do sistema que controla a troca de páginas e gerencia a memória local do simulador de vendas.</p>
+                <p class="mt-10"><strong>JavaScript (ES6):</strong> Camada de inteligência do sistema que controla a troca de páginas e gerencia a memória local do simulador de vendas e cálculos ambientais.</p>
             </section>
         </article>
     </main>
@@ -129,9 +147,9 @@
                 <p class="mt-15">Se você encontrou algum problema no sistema de anúncios, possui dúvidas sobre a rastreabilidade dos alimentos ou deseja enviar uma ideia inovadora para o nosso projeto escolar do Concurso Agrinho, utilize o formulário abaixo.</p>
                 
                 <div class="form-simulador mt-20">
-                    <input type="text" id="nomeUsuario" placeholder="Seu Nome Completo">
-                    <input type="email" id="emailUsuario" placeholder="Seu E-mail de Contato">
-                    <textarea id="mensagemUsuario" placeholder="Digite aqui sua sugestão, crítica ou reclamação..."></textarea>
+                    <input type="text" id="nomeUsuario" placeholder="Seu Nome Completo" aria-label="Nome completo">
+                    <input type="email" id="emailUsuario" placeholder="Seu E-mail de Contato" aria-label="E-mail">
+                    <textarea id="mensagemUsuario" placeholder="Digite aqui sua sugestão, crítica ou reclamação..." aria-label="Mensagem"></textarea>
                     <button onclick="enviarOuvidoriaSimulada()">Enviar Mensagem</button>
                 </div>
             </section>
