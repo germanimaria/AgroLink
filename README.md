@@ -1,7 +1,7 @@
-# 🌾 • AgroLink - Sistema Inteligente & Sustentável
->  • **Projeto Escolar desenvolvido para o Concurso Agrinho 2026**
+# 🌱 • AgroLink - Sistema Inteligente & Sustentável
+>  🌿 • **Projeto Escolar desenvolvido para o Concurso Agrinho 2026**
 > 
-> 🌐 • **Acesse o projeto publicado aqui:** [AgroLink Web](https://germanimaria.github.io/AgroLink/) 
+> 🌍 • **Acesse o projeto publicado aqui:** [AgroLink Web](https://germanimaria.github.io/AgroLink/) 
 
 ---
 
@@ -29,8 +29,8 @@ Ao eliminar intermediários desnecessários na cadeia de distribuição, o ecoss
 O sistema foi desenvolvido como uma **SPA (Single Page Application)**, onde a navegação acontece de forma fluida através de abas interativas controladas por JavaScript:
 
 1. **Início (Tecnologia no Campo):** Apresentação do propósito do projeto, contextualização dos desafios logísticos do agronegócio e definição dos quatro pilares do público-alvo.
-2. **Sustentabilidade (Eco-Agro & Calculadora):** Seção educativa sobre Agricultura sustentável e Práticas Ecológicas como Plantio Direto, Bioinsumos e Rotação de Culturas. Ao final da página inclui uma Calculadora de Carbono Interativa para conscientizar o usuário sobre o impacto ecológico do transporte de alimentos.
-3. **Simulador de Vendas:** Interface prática onde o agricultor simula o cadastro de seus produtos, adicionando os dados: Nome, Preço, Localização, Contato e Selo Sustentável (Caso o produto foi cultivado de forma sustentavél). Os itens são publicados em tempo real em uma Vitrine Pública Simulada via manipulação do DOM.
+2. **Sustentabilidade (Eco-Agro & Calculadora):** Seção educativa sobre Agricultura Sustentável e Práticas Ecológicas como Plantio Direto, Bioinsumos e Rotação de Culturas. Ao final da página inclui uma Calculadora de Carbono Interativa para conscientizar o usuário sobre o impacto ecológico do transporte de alimentos.
+3. **Simulador de Vendas:** Interface prática onde o agricultor simula o cadastro de seus produtos, adicionando os dados: Nome, Preço, Localização, Contato e Selo Sustentável (caso o produto tenha sido cultivado de forma sustentavél). Os itens são publicados em tempo real em uma Vitrine Pública Simulada via manipulação do DOM.
 4. **Ouvidoria e Feedback:** Canal direto simulado para receber sugestões, críticas ou dúvidas.
 
 ---
@@ -41,7 +41,7 @@ O desenvolvimento do front-end priorizou a acessibilidade, a clareza visual e a 
 
 * **HTML5:** Estruturação semântica e organizada de todas as seções e formulários.
 * **CSS3:** Identidade visual baseada em uma paleta de cores inspirada na natureza (tons de verde e terra) e animações de transição de tela.
-* **JavaScript (ES6):** Motor de inteligência do sistema, responsável pela lógica do cadastro dinâmico, simulador de frete/carbono e navegação entre páginas sem recarregamento externo.
+* **JavaScript (ES6):** Motor de inteligência do sistema, responsável pela lógica do cadastro dinâmico, simulador de pegada de carbono e navegação entre páginas sem recarregamento externo.
 
 ---
 
