@@ -1,7 +1,7 @@
-# 🌾 AgroLink - Sistema Inteligente & Sustentável
-> **Projeto Escolar desenvolvido para o Concurso Agrinho 2026** >
-
-🌐 **Acesse o projeto publicado aqui:** [AgroLink Web](https://germanimaria.github.io/AgroLink/)
+# 🌾 • AgroLink - Sistema Inteligente & Sustentável
+>  • **Projeto Escolar desenvolvido para o Concurso Agrinho 2026**
+> 
+> 🌐 • **Acesse o projeto publicado aqui:** [AgroLink Web](https://germanimaria.github.io/AgroLink/) 
 
 ---
 
@@ -29,9 +29,9 @@ Ao eliminar intermediários desnecessários na cadeia de distribuição, o ecoss
 O sistema foi desenvolvido como uma **SPA (Single Page Application)**, onde a navegação acontece de forma fluida através de abas interativas controladas por JavaScript:
 
 1. **Início (Tecnologia no Campo):** Apresentação do propósito do projeto, contextualização dos desafios logísticos do agronegócio e definição dos quatro pilares do público-alvo.
-2. **Sustentabilidade (Eco-Agro & Calculadora):** Seção educativa sobre *Plantio Direto*, *Bioinsumos* e *Rotação de Culturas*. Inclui uma **Calculadora de Carbono Interativa** para conscientizar o usuário sobre a pegada ecológica do transporte de alimentos.
-3. **Simulador de Vendas:** Interface prática onde o agricultor simula o cadastro de seus produtos (Nome, Preço, Localização, Contato e Selo Sustentável). Os itens são publicados **em tempo real** em uma Vitrine Pública Simulada via manipulação do DOM.
-4. **Ouvidoria e Feedback:** Canal direto para receber sugestões, críticas ou dúvidas sobre a rastreabilidade dos alimentos, aproximando a comunidade escolar dos administradores.
+2. **Sustentabilidade (Eco-Agro & Calculadora):** Seção educativa sobre Agricultura sustentável e Práticas Ecológicas como Plantio Direto, Bioinsumos e Rotação de Culturas. Ao final da página inclui uma Calculadora de Carbono Interativa para conscientizar o usuário sobre o impacto ecológico do transporte de alimentos.
+3. **Simulador de Vendas:** Interface prática onde o agricultor simula o cadastro de seus produtos, adicionando os dados: Nome, Preço, Localização, Contato e Selo Sustentável (Caso o produto foi cultivado de forma sustentavél). Os itens são publicados em tempo real em uma Vitrine Pública Simulada via manipulação do DOM.
+4. **Ouvidoria e Feedback:** Canal direto simulado para receber sugestões, críticas ou dúvidas.
 
 ---
 
@@ -54,5 +54,5 @@ Este projeto foi idealizado, planejado e programado pelos estudantes:
 * Maria Izabel D.C.
 * Victor Hugo C. D'S.
 
---. --. --. --.
+---
 
